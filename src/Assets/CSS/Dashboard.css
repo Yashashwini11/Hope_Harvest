@@ -1,0 +1,116 @@
+
+.entire {
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  cursor: pointer;
+
+}
+
+.sideapp {
+  padding: 1rem;
+  height: 43vw;
+  width: 35vh;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: azure;
+}
+
+.sideapp li {
+  margin-bottom: 10px;
+  padding: 2.5rem;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+.sample {
+  float: left;
+  padding-left: 1%;
+  font-size: larger;
+}
+
+a {
+  display: block;
+  color: #000000;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+
+.logout {
+  bottom: 9%;
+  left: 7%;
+  border-radius: 0;
+  position: fixed;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+
+}
+
+.logout {
+  background-color: #ff29f8;
+  box-shadow: #e414ff 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.logout:active {
+  transform: scale(1.025);
+}
+
+.product {
+  display: grid;
+  cursor: pointer;
+  padding: 120px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  margin: 0 auto;
+  padding-left: 20%;
+  padding-bottom: 40%;
+}
+
+.zoom {
+  height: 50px;
+  width: 50px;
+}
+
+.product h2 {
+  font-size: medium;
+  padding-bottom: 15%;
+}
+
+.donatebutton
+{
+  font-size: medium;
+  padding-bottom: 15%;
+}
+
+.accicon
+{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 9px;
+  margin-right: 20px;
+}
