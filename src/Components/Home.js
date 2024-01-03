@@ -8,7 +8,7 @@ function Home() {
   return(
          <>
         <div class="img-container">
-        <img src="C:\Users\Yashashwini\Documents\GitHub\React_IRC\Day_5\mainapp\src\Assets\Images\Renamef.png" alt="no image"/>
+        <img src="C:\Users\Yashashwini\Documents\GitHub\React_IRC\Day_5\mainapp\src\Assets\Images\Renamef.png" alt="no"/>
         </div>
              <div class="description">
              Small donations, big impacts.

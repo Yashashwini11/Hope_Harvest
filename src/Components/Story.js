@@ -23,9 +23,7 @@ function Story() {
                                         <img src="https://picsum.photos/id/1041/800/450" alt="" />
                                     </div>
                                     <figcaption>
-
                                         In a small town, 16-year-old Alex faced a life-threatening heart condition. With little means, his sister Emma turned to the HopeHarvest donation app. Strangers rallied, generously funding Alex's surgery. This act of kindness not only mended his heart but also showcased the power of community support. Now recovered, Alex advocates for organ donation, turning his life story into a testament to the transformative impact of collective goodwill and the hope harvested from the kindness of strangers.
-
                                     </figcaption>
                                 </figure>
                             </li>

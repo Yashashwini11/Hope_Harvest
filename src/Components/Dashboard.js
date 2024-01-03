@@ -7,8 +7,6 @@ import poverty from '../Assets/Images/poverty.jpg';
 import medical from '../Assets/Images/medical.webp';
 import nonprofit from '../Assets/Images/nprofit.jpg';
 import { CircleUser } from 'lucide-react';
-
-
 function Dashboard() {
   return (
     <>
@@ -40,14 +38,14 @@ function Dashboard() {
         <div className="product-grid">
             <div className="product">
                 <div className="zoom">
-                    <img src={flood} alt="Product  1" style={{ height: '190px', width: '190px' }}/>
+                    <img src={flood} alt="Product" style={{ height: '190px', width: '190px' }}/>
                 <h2>NATURAL DISASTERS</h2>
                 <button className='donatebutton'>DONATE</button>
                 </div>
             </div>
             <div className="product">
                 <div className="zoom">
-                    <img src={education} alt="Product  2" style={{ height: '190px', width: '190px' }} />
+                    <img src={education} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>EDUCATION</h2>
                 <button className='donatebutton'>DONATE</button>
 
@@ -55,7 +53,7 @@ function Dashboard() {
             </div>
             <div className="product">
                 <div className="zoom">
-                    <img src={women} alt="Product  3" style={{ height: '190px', width: '190px' }} />
+                    <img src={women} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>WOMEN</h2>
                 <button className='donatebutton'>DONATE</button>
 
@@ -63,7 +61,7 @@ function Dashboard() {
             </div>
             <div className="product">
                 <div className="zoom">
-                    <img src={poverty} alt="Product  4" style={{ height: '190px', width: '190px' }} />
+                    <img src={poverty} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>POVERTY</h2>
                 <button className='donatebutton'>DONATE</button>
 
@@ -71,7 +69,7 @@ function Dashboard() {
             </div>
             <div className="product">
                 <div className="zoom">
-                    <img src={medical} alt="Product  5" style={{ height: '190px', width: '190px' }} />
+                    <img src={medical} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>MEDICAL CARE</h2>
                 <button className='donatebutton'>DONATE</button>
 
@@ -79,7 +77,7 @@ function Dashboard() {
             </div>
             <div className="product">
                 <div className="zoom">
-                    <img src={nonprofit} alt="Product  6" style={{ height: '190px', width: '190px' }} />
+                    <img src={nonprofit} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>NON-PROFIT</h2>
                 <button className='donatebutton'>DONATE</button>
 
