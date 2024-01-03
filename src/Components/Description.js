@@ -7,7 +7,6 @@ import women from '../Assets/Images/women.jpg';
 function Description() {
     return (
         <>
-       
             <h1 className='des2'>Causes you can raise funds for</h1>
             <div className="product-grid1">
                 <div className="product1">
