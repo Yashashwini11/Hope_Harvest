@@ -11,9 +11,6 @@ function Form() {
 					<div class="form-row">
                             <input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required/>
 
-						    {/* <option class="option" value="businessman">Businessman</option>
-						    <option class="option" value="reporter">Reporter</option>
-						    <option class="option" value="secretary">Secretary</option> */}
 						<span class="select-btn">
 						  	<i class="zmdi zmdi-chevron-down"></i>
 						</span>
@@ -108,7 +105,7 @@ function Form() {
 						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email"/>
 					</div>
 					<div class="form-checkbox">
-						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
+						<label class="container"><p>I do accept the <span class="text">Terms and Conditions</span> of your site.</p>
 						  	<input type="checkbox" name="checkbox"/>
 						  	<span class="checkmark"></span>
 						</label>

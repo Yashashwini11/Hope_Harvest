@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -49,7 +49,6 @@ const Signup = () => {
       return;
     }
 
-    // If all validations pass, navigate to the home page
     navigate('/');
   };
 
