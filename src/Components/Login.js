@@ -10,17 +10,6 @@ function Login() {
   const [password, setPassword] = useState('');
 
   const[users,setUser]=useState([])
-  const fetchData=async()=>
-  {
-    try{
-        const res=await getUser()
-        setUser(res.data)
-    }
-    catch(e)
-    {
-      console.log(e)
-    }
-  }
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
