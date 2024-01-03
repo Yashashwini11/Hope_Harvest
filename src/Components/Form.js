@@ -1,15 +1,40 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import {addDonars} from '../Services/api'
 function Form() {
+
+	const[data,setData]=useState({
+		first_name:'',
+		amount:0
+	})
+	const handleChange =(e)=>{
+		setData({...data, [e.target.id]:e.target.value})
+	}
+	const handleSubmit=async(e)=>
+	{
+		e.preventDefault();
+		try{
+			const res=await addDonars(data)
+			if(res.status==201)
+			{
+				alert('donar added')
+			}
+		}
+		catch(e)
+		{
+			console.log(e)
+		}
+	}
+	
   return (
     <>
+	<form onSubmit={handleSubmit}>
     <div class="page-content">
 		<div class="form-v10-content">
 			<form class="form-detail" action="#" method="post" id="myform">
 				<div class="form-left">
 					<h2>General Infomation</h2>
 					<div class="form-row">
-                            <input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required/>
+                            <input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required onChange={handleChange}/>
 
 						<span class="select-btn">
 						  	<i class="zmdi zmdi-chevron-down"></i>
@@ -17,14 +42,14 @@ function Form() {
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-1">
-							<input type="number" name="first_name" id="first_name" class="input-text" placeholder="Age" required/>
+							<input type="number" name="first_name" id="first_name" class="input-text" placeholder="Age" required onChange={handleChange}/>
 						</div>
 						<div class="form-row form-row-2">
-							<input type="date" name="last_name" id="last_name" class="input-text" placeholder="Date Of Birth" required/>
+							<input type="date" name="last_name" id="last_name" class="input-text" placeholder="Date Of Birth" required onChange={handleChange}/>
 						</div>
 					</div>
 					<div class="form-row">
-							<input type="number" name="last_name" id="last_name" class="input-text" placeholder="Amount to be raised" required/>
+							<input type="number" name="last_name" id="amount" class="input-text" placeholder="Amount to be raised" required onChange={handleChange}/>
 
 						<span class="select-btn">
 						  	<i class="zmdi zmdi-chevron-down"></i>
@@ -32,7 +57,7 @@ function Form() {
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
-							<input type="text" name="business" class="business" id="business" placeholder="Location" required/>
+							<input type="text" name="business" class="business" id="business" placeholder="Location" required onChange={handleChange}/>
 						</div>
 						<div class="form-row form-row-4">
 							<select name="employees">
@@ -51,24 +76,24 @@ function Form() {
 						</div>
 					</div>
 					<div class="form-row">
-						<input type="text" name="company" class="company" id="company" placeholder="Reason to raise fund" required/>
+						<input type="text" name="company" class="company" id="company" placeholder="Reason to raise fund" required onChange={handleChange}/>
 					</div>
 					<div class="form-row">
                         <label>Photo of affected person</label>
-						<input type="file" name="company" class="company" id="company" placeholder="Photo of affected person" required/>
+						<input type="file" name="company" class="company" id="company" placeholder="Photo of affected person" required onChange={handleChange}/>
 					</div>
 				</div>
 				<div class="form-right">
 					<h2>Contact Details</h2>
 					<div class="form-row">
-						<input type="text" name="street" class="street" id="street" placeholder="Street + Nr" required/>
+						<input type="text" name="street" class="street" id="street" placeholder="Street + Nr" required onChange={handleChange}/>
 					</div>
 					<div class="form-row">
-						<input type="text" name="additional" class="additional" id="additional" placeholder="Additional Information" required/>
+						<input type="text" name="additional" class="additional" id="additional" placeholder="Additional Information" required onChange={handleChange}/>
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-1">
-							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required/>
+							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required onChange={handleChange}/>
 						</div>
 						<div class="form-row form-row-2">
 							<select name="place">
@@ -95,14 +120,14 @@ function Form() {
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-1">
-							<input type="text" name="code" class="code" id="code" placeholder="Code +" required/>
+							<input type="text" name="code" class="code" id="code" placeholder="Code +" required onChange={handleChange}/>
 						</div>
 						<div class="form-row form-row-2">
-							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required/>
+							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required onChange={handleChange}/>
 						</div>
 					</div>
 					<div class="form-row">
-						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email"/>
+						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email" onChange={handleChange}/>
 					</div>
 					<div class="form-checkbox">
 						<label class="container"><p>I do accept the <span class="text">Terms and Conditions</span> of your site.</p>
@@ -117,6 +142,7 @@ function Form() {
 			</form>
 		</div>
 	</div>
+	</form>
     </>
   )
 }

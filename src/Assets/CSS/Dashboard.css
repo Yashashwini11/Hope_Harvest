@@ -101,6 +101,14 @@ a {
   padding-bottom: 15%;
 }
 
+.sample1
+{
+  display: flex;
+  padding-top: 1%;
+  position: fixed;
+  font-weight: 800;
+}
+
 .donatebutton
 {
   font-size: medium;
@@ -111,6 +119,13 @@ a {
 {
   display: flex;
   justify-content: flex-end;
-  padding-top: 9px;
+  padding-top: 15px
+}
+
+.user{
+  
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
   margin-right: 20px;
 }

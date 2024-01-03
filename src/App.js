@@ -15,7 +15,8 @@ import "./Assets/CSS/Signup.css";
 import './Assets/CSS/Footer.css';
 import './Assets/CSS/Dashboard.css';
 import './Assets/CSS/Form.css';
-
+import Donors from './Components/Donors';
+import './Assets/CSS/donars.css'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path='/donate' element={<Form/>}/>
         <Route path='/story' element={<Story/>}/>
+        <Route path='/donors' element={<Donors/>}/>
       </Routes>
       <Footer />
     </div>

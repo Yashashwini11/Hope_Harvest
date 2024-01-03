@@ -16,6 +16,7 @@ function Dashboard() {
             <Link to='/'><li>HOME</li></Link>
             <Link to='/story'><li>SUCCESS STORIES</li></Link>
             <Link to='/donate'><li>START A FUNDRAISER</li></Link>
+            <Link to='/donors'><li>VIEW DONATERS</li></Link>
           </ul>
           <div>
             <button className='logout'>LOG OUT</button>
@@ -25,8 +26,8 @@ function Dashboard() {
       <div>
         <nav className="navigation">
           <ul>
-            <li className="sample">HopeHarvest</li>
-            <li>USER</li>
+            <li className="sample1">HopeHarvest</li>
+            <li className="user">USER</li>
             <div className='accicon'>
               <CircleUser/>
               </div>
@@ -40,14 +41,14 @@ function Dashboard() {
                 <div className="zoom">
                     <img src={flood} alt="Product" style={{ height: '190px', width: '190px' }}/>
                 <h2>NATURAL DISASTERS</h2>
-                <button className='donatebutton'>DONATE</button>
+                <Link to="/donate"><button className='donatebutton'>DONATE</button></Link>
                 </div>
             </div>
             <div className="product">
                 <div className="zoom">
                     <img src={education} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>EDUCATION</h2>
-                <button className='donatebutton'>DONATE</button>
+                <Link to='/donate'><button className='donatebutton'>DONATE</button></Link>
 
                 </div>
             </div>
@@ -55,7 +56,7 @@ function Dashboard() {
                 <div className="zoom">
                     <img src={women} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>WOMEN</h2>
-                <button className='donatebutton'>DONATE</button>
+                <Link to='/donate'><button className='donatebutton'>DONATE</button></Link>
 
                 </div>
             </div>
@@ -63,7 +64,7 @@ function Dashboard() {
                 <div className="zoom">
                     <img src={poverty} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>POVERTY</h2>
-                <button className='donatebutton'>DONATE</button>
+                <Link to='/donate'><button className='donatebutton'>DONATE</button></Link>
 
                 </div>
             </div>
@@ -71,7 +72,7 @@ function Dashboard() {
                 <div className="zoom">
                     <img src={medical} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>MEDICAL CARE</h2>
-                <button className='donatebutton'>DONATE</button>
+                <Link to='/donate'><button className='donatebutton'>DONATE</button></Link>
 
                 </div>
             </div>
@@ -79,7 +80,7 @@ function Dashboard() {
                 <div className="zoom">
                     <img src={nonprofit} alt="Product" style={{ height: '190px', width: '190px' }} />
                 <h2>NON-PROFIT</h2>
-                <button className='donatebutton'>DONATE</button>
+               <Link to='/donate'><button className='donatebutton'>DONATE</button></Link> 
 
                 </div>
             </div>
