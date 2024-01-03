@@ -8,7 +8,6 @@ function Description() {
     return (
         <>
        
-        <h1 className='des1'>.</h1>
             <h1 className='des2'>Causes you can raise funds for</h1>
             <div className="product-grid1">
                 <div className="product1">
