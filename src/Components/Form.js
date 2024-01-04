@@ -2,28 +2,39 @@ import React, { useState } from 'react'
 import {addDonars} from '../Services/api'
 function Form() {
 
-	const[data,setData]=useState({
-		first_name:'',
-		amount:0
-	})
-	const handleChange =(e)=>{
-		setData({...data, [e.target.id]:e.target.value})
-	}
-	const handleSubmit=async(e)=>
-	{
+	const [data, setData] = useState({
+		first_name: '',
+		amount: 0,
+		age: '',
+		dateOfBirth: '',
+		location: '',
+		reason: '',
+		street: '',
+		additional: '',
+		zip: '',
+		place: '',
+		country: '',
+		code: '',
+		phone: '',
+		your_email: '',
+	  });
+	
+	  const handleChange = (e) => {
+		setData({ ...data, [e.target.id]: e.target.value });
+	  };
+	
+	  const handleSubmit = async (e) => {
 		e.preventDefault();
-		try{
-			const res=await addDonars(data)
-			if(res.status==201)
-			{
-				alert('donar added')
-			}
+		try {
+		  const res = await addDonars(data);
+		  if (res.status === 201) {
+			alert('Donor added successfully');
+		  }
+		} catch (error) {
+		  console.error(error);
 		}
-		catch(e)
-		{
-			console.log(e)
-		}
-	}
+	  };
+	
 	
   return (
     <>

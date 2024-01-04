@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:3000';
 
-const getDonars = () => axios.get(`${URL}/donars`)
-const addDonars = (data) => axios.post(`${URL}/donars`, data)
+const getDonars = () => axios.get(`${BASE_URL}/donate`);
+const addDonars = (data) => axios.post(`${BASE_URL}/donate`, data);
 
-export {addDonars , getDonars}
+export { addDonars, getDonars };

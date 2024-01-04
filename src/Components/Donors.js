@@ -1,3 +1,4 @@
+// Donors.js
 import React, { useState, useEffect } from 'react';
 import { getDonars } from '../Services/api';
 
@@ -5,24 +6,25 @@ function Donors() {
   const [donars, setDonars] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await getDonars();
-        setDonars(res.data);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-
     fetchData();
-  }, []); 
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const res = await getDonars();
+      setDonars(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <table className='donaters'>
         <thead>
           <tr>
-            <th>name</th>
-            <th>amount</th>
+            <th>Name</th>
+            <th>Amount</th>
           </tr>
         </thead>
         <tbody>
