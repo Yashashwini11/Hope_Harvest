@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Assets/CSS/Story.css';
-
+import '../Assets/Images/boy smiling.jpg'
 function Story() {
     return (
         <>
@@ -19,7 +19,7 @@ function Story() {
                             <li class="carousel__slide">
                                 <figure>
                                     <div>
-                                        <img src="https://picsum.photos/id/1041/800/450" alt="" />
+                                        <img src="https://whoelse.ca/wp-content/uploads/2016/12/Kids.jpg" alt="nothing" />
                                     </div>
                                     <figcaption>
                                         In a small town, 16-year-old Alex faced a life-threatening heart condition. With little means, his sister Emma turned to the HopeHarvest donation app. Strangers rallied, generously funding Alex's surgery. This act of kindness not only mended his heart but also showcased the power of community support. Now recovered, Alex advocates for organ donation, turning his life story into a testament to the transformative impact of collective goodwill and the hope harvested from the kindness of strangers.
@@ -29,7 +29,7 @@ function Story() {
                             <li class="carousel__slide">
                                 <figure>
                                     <div>
-                                        <img src="https://picsum.photos/id/1043/800/450" alt="" />
+                                        <img src="https://thumbs.dreamstime.com/b/poor-boy-sitting-ground-waiting-his-father-back-to-home-kurdistan-iraq-33247318.jpg" alt="" />
                                     </div>
                                     <figcaption>
                                     Meet Sarah, a single mother facing financial struggles when her son, Jake, needed urgent medical treatment. HopeHarvest, a donation app, became her lifeline. Strangers, touched by Sarah's story, poured in contributions. The generosity not only saved Jake but also empowered Sarah to start a support group for other parents in need. Through HopeHarvest, she not only secured Jake's health but created a community that understands the profound impact of extending a helping hand. Their story exemplifies how a simple act of giving can ripple
@@ -39,7 +39,7 @@ function Story() {
                             <li class="carousel__slide">
                                 <figure>
                                     <div>
-                                        <img src="https://picsum.photos/id/1044/800/450" alt="" />
+                                        <img src="https://thumbs.dreamstime.com/b/poor-indian-street-boy-little-standing-road-side-mumbai-india-50576435.jpg" alt="" />
                                     </div>
                                     <figcaption>
                                     In the aftermath of a devastating flood, Mark found himself grappling with the loss of his home and livelihood. HopeHarvest, a beacon of hope, connected him with compassionate donors worldwide. Their collective support enabled Mark to rebuild not only his house but also his dreams. With funds pouring in, he initiated a community-driven flood resilience program, helping neighbors withstand future disasters. Mark's journey from despair to resilience showcases the transformative power of collective generosity, turning tragedy into an opportunity to foster unity and preparedness within a community. HopeHarvest, truly sowing seeds of hope in the wake of adversity.
@@ -79,13 +79,13 @@ function Story() {
                         </ul>
                         <ul class="carousel__thumbnails">
                             <li>
-                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt="" /></label>
+                                <label for="slide-1"><img src="https://whoelse.ca/wp-content/uploads/2016/12/Kids.jpg" alt="nothing" /></label>
                             </li>
                             <li>
-                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt="" /></label>
+                                <label for="slide-2"><img src="https://thumbs.dreamstime.com/b/poor-boy-sitting-ground-waiting-his-father-back-to-home-kurdistan-iraq-33247318.jpg" alt="" /></label>
                             </li>
                             <li>
-                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt="" /></label>
+                                <label for="slide-3"><img src="https://thumbs.dreamstime.com/b/poor-indian-street-boy-little-standing-road-side-mumbai-india-50576435.jpg" alt="" /></label>
                             </li>
                             <li>
                                 <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt="" /></label>

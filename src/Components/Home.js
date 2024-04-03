@@ -1,6 +1,7 @@
 import React from 'react'
 import img1 from "../Assets/Images/Renamef.png";
 import Description from './Description';
+import Footer from './Footer'
 import Story from './Story';
 import { Link } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function Home() {
         <img src={img1} alt="donate" />
         <Description/>
         <Story/>
+        <Footer/>
         </>
   )
 }

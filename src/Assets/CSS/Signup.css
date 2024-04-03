@@ -17,8 +17,8 @@ body {
     backdrop-filter: blur(7px);
     border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 2rem; /* Adjusted padding for better spacing */
-    width: 25vw; /* Adjusted width for better responsiveness */
-    height: 65vh;
+    width: 500vw; /* Adjusted width for better responsiveness */
+    height: 80vh;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     text-align: center;

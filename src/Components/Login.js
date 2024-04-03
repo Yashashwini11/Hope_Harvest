@@ -1,34 +1,26 @@
-import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { toast, Toaster } from 'react-hot-toast';
 
 function Login() {
-  const emailRef = useRef(null);
-  const passwordRef = useRef(null);
-
-  const [error, setError] = useState({
+  const [data, setData] = useState({
     email: '',
-    password: '',
+    password: ''
   });
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate(); 
+
+  const handleChange = (e) => {
+    setData({...data, [e.target.id]: e.target.value})
+}
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(data);
 
-    const data = {
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-    };
-
-    if (data.email === 'yashashwini@gmail.com' && data.password === 'yashu1234') {
-      toast.success("Logged in", {
-        duration: 6000
-      });
-     
-    } else {
-      setError({ email: 'Incorrect username/password', password: 'Incorrect username/password' });
-    }
-  };
-
+   
   return (
     <>
       <div className="login-container">
@@ -37,19 +29,20 @@ function Login() {
           <div className="form-group">
             <input
               type="email"
+              id="email"
               placeholder="Enter your email"
-              ref={emailRef}
+              onChange={handleChange}
               required
             />
           </div>
           <div className="form-group">
             <input
               type="password"
+              id="password"
               placeholder="Enter your password"
-              ref={passwordRef}
+              onChange={handleChange}
               required
             />
-            <span className="error">{error.password}</span>
           </div>
           <button type="submit">
             <span>Login</span>
@@ -66,5 +59,5 @@ function Login() {
     </>
   );
 }
-
-export default Login;
+}
+export default Login

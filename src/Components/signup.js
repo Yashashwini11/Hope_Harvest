@@ -1,58 +1,45 @@
 import React, { useState } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import axios
+
 const Signup = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [repeatPassword, setRepeatPassword] = useState('');
+  const navigate = useNavigate();
+  const [data, setData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
 
-    const handleNameChange = (e) => {
-    setName(e.target.value);
+  const [confirmpassword, setConfirmPassword] = useState('');
+
+  const handleconfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleRepeatPasswordChange = (e) => {
-    setRepeatPassword(e.target.value);
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    if (!name || name.length < 2) {
-      toast.error("Name must be at least 2 characters");
-      return;
+    if (data.password === confirmpassword) {
+      axios.post("http://localhost:8080/api/v1/user/save", data)
+        .then(response => {
+          console.log("Success " + response);
+          navigate('/login');
+          setData({});
+          setConfirmPassword("");
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          toast.error("Failed to register user. Please try again.");
+        });
+    } else {
+      toast.error("Passwords do not match");
     }
-  
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      toast.error("Invalid email format");
-      return;
-    }
-  
-    if (password.length < 8) {
-      toast.error('Password must be at least 8 characters.');
-      return;
-    }
-  
-    if (password !== repeatPassword) {
-      toast.error('Passwords do not match');
-      return;
-    }
-  
-    toast.success("Successful");
-    
-    
   };
-  
-  
-  
+
   return (
     <>
       <div className="signup-container">
@@ -63,8 +50,8 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Enter your name"
-              value={name}
-              onChange={handleNameChange}
+              id="name"
+              onChange={handleChange}
               required
             />
           </div>
@@ -72,8 +59,8 @@ const Signup = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={handleEmailChange}
+              id="email"
+              onChange={handleChange}
               required
             />
           </div>
@@ -81,8 +68,8 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={handlePasswordChange}
+              id="password"
+              onChange={handleChange}
               required
             />
           </div>
@@ -90,8 +77,8 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Repeat your password"
-              value={repeatPassword}
-              onChange={handleRepeatPasswordChange}
+              id="confirmpassword"
+              onChange={handleconfirmPasswordChange}
               required
             />
           </div>
@@ -106,6 +93,5 @@ const Signup = () => {
     </>
   );
 };
-
 
 export default Signup;
