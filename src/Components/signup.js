@@ -24,7 +24,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (data.password === confirmpassword) {
-      axios.post("http://localhost:8080/api/v1/user/save", data)
+      axios.post("http://localhost:8181/api/v1/user/save", data)
         .then(response => {
           console.log("Success " + response);
           navigate('/login');

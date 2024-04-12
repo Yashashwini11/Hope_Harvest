@@ -2,14 +2,13 @@ import React from 'react'
 import img1 from "../Assets/Images/Renamef.png";
 import Description from './Description';
 import Footer from './Footer'
-import Story from './Story';
 import { Link } from 'react-router-dom';
 
 function Home() {
   return(
          <>
         <div class="img-container">
-        <img src="C:\Users\Yashashwini\Documents\GitHub\React_IRC\Day_5\mainapp\src\Assets\Images\Renamef.png" alt="no"/>
+        {/* <img src="C:\Users\Yashashwini\Documents\GitHub\React_IRC\Day_5\mainapp\src\Assets\Images\Renamef.png" alt="no"/> */}
         </div>
              <div class="description">
              Small donations, big impacts.
@@ -22,7 +21,6 @@ function Home() {
         </div>
         <img src={img1} alt="donate" />
         <Description/>
-        <Story/>
         <Footer/>
         </>
   )
